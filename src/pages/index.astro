@@ -1,17 +1,283 @@
 ---
-
+import "../styles/global.css";
+import Slideshow from "../components/Slideshow.astro";
 ---
 
+<!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta
+      name="description"
+      content="Sue Lyn Homeopathy - Offering professional homeopathic consultations for various health concerns."
+    />
+    <meta
+      name="keywords"
+      content="Homeopathy, Sue Lyn, Homeopathic consultations, Health, Wellness, Natural Remedies, Holistic"
+    />
+    <title>Sue Lyn Homeopathy</title>
+    <link rel="stylesheet" href="./styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="icon" href="./logo.svg" type="image/x-icon" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+	
+  </head>
+  <body>
+    <div class="top">
+      <div class="logo">
+        <img src="images/logo.png" alt="Sue Lyn Homeopathy Logo" />
+      </div>
+      <div class="w-72">
+        <a href="https://www.homeopathy-soh.org/"
+          ><img
+            class="soh"
+            src="images/soh.png"
+            alt="society of homeopaths banner"
+          /></a
+        >
+      </div>
+      <div class="flex gap-2">
+        <i class="fas fa-envelope my-auto"></i>
+        <a
+          href="mailto:lavenderthyme@protonmail.com"
+          class="hover:underline m-0">lavenderthyme@protonmail.com</a
+        >
+      </div>
+    </div>
+    <section class="main-page">
+      <div class="main-left">
+        <div class="intro flex flex-col">
+          <div class="xl:flex-row flex flex-col fade-in">
+            <img
+              class="rounded-full xl:mr-8 w-64 mx-auto mb-6 xl:mb-0 object-cover"
+              src="images/pfp.png"
+              style="aspect-ratio: 1 / 1;"
+            />
+            <div>
+              <h1
+                class="text-5xl font-light mb-4 tracking-wide"
+                style="font-family: var(--font-secondary);"
+              >
+                Hello! <span class="italic" style="color: var(--primary-color);"
+                  >I'm Sue.</span>
+              </h1>
+              <p
+                class="text-3xl text-gray-700"
+                style="font-family: var(--font-primary);"
+              >
+                I am a homeopath, Graduated from the Contemporary College of
+                Homeopathy, Bristol, UK.
+              </p>
+            </div>
+          </div>
+          <div class="dropdown-section fade-in">
+            <button class="dropdown-toggle">
+              <span>read more</span>
+              <span class="dropdown-arrow">▼</span>
+            </button>
+            <div class="dropdown-content">
+              <p>
+                Homeopathy is a holistic system of medicine that has been
+                practiced for over 200 years. It works on the principle of
+                treating like with like, using highly diluted natural substances
+                to stimulate your body's own healing mechanisms. Each remedy is
+                carefully selected based on your unique symptoms and
+                constitution.
+              </p>
+              <div class="mt-4 flex flex-col sm:flex-row items-center gap-4">
+                <img class="w-1/2" src="images/cert.jpg" alt="certification" />
+                <div class="flex items-center justify-center sm:w-1/2">
+                  <p>Certificate</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="extra-text fade-in">
+          <p>
+            I offer a <span
+              class="font-semibold"
+              style="color: var(--primary-color);">safe and supportive</span
+            > space to explore your health concerns through homeopathy. If you'd like
+            to know more or book a consultation, please don't hesitate to get in touch.
+          </p>
+        </div>
+      </div>
+
+      <div class="main-right fade-in-right gradient-background py-12">
+        <h2 style="font-family: var(--font-secondary);font-weight: 100;">
+          Request a private consultation <span class="font-medium">today.</span>
+        </h2>
+        <a href="payment.html" class="btn-primary btn-right button-animation"
+          >Contact</a
+        >
+        <a href="#faq-section" class="btn-glass btn-right button-animation"
+          >FAQ's</a
+        >
+        <a href="#pricing-section" class="btn-glass btn-right button-animation"
+          >Consultations</a
+        >
+      </div>
+    </section>
+
+    <section class="slideshow-section">
+		<Slideshow />
+    </section>
+    <div class="more-info">
+      <p>
+        For more information on homeopathy, please visit the <a
+          class="underline"
+          href="https://www.homeopathy-soh.org/"
+          target="_blank">Society of Homeopaths</a
+        > website.
+      </p>
+    </div>
+
+    <section id="faq-section" class="my-20">
+      <div class="faq">
+        <h2 class="text-left w-full">Frequently Asked Questions</h2>
+        <div>
+          <h3>How many sessions do I need?</h3>
+          <p>
+            That is hard to say. A simple acute case can usually be resolved
+            quickly (covid, food poisoning, minor injuries), whereas a complex
+            illness with many years of history needs plenty of time (months to
+            years) to work through it. Examples are eczema, depression,
+            autoimmune disorders, etc.
+          </p>
+        </div>
+        <div>
+          <h3>Do I need my own kit?</h3>
+          <p>
+            I would always recommend buying a kit if you plan to use homeopathy
+            long term as it can come in very handy for emergency situations.
+            <a href="https://ainsworths.com/The-Essential-Kit/" target="_blank"
+              >Ainsworths.com</a
+            >
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing-section" class="pricing my-8">
+      <h2>Consultations</h2>
+      <div class="pricing-cards">
+        <div id="card1">
+          <h3>Initial consultation</h3>
+          <p>1-2 hours</p>
+        </div>
+        <div id="card2">
+          <h3>Follow up</h3>
+          <p>Time as necessary: 30 minutes - 1 hour</p>
+        </div>
+      </div>
+
+      <p>
+        Remedies / postage paid separately - usually between £10 - 15.
+        <br />
+        Includes support by email.
+        <br />
+        Please enquire for more details.
+      </p>
+
+      <h2>What happens at a consultation?</h2>
+    </section>
+
+    <section class="gradient-background pb-12">
+      <div class="contact-section">
+        <div class="contact-container">
+          <h2>Enquire</h2>
+          <a
+            href="mailto:lavenderthyme@protonmail.com"
+            class="text-white text-xl underline hover:text-gray-300"
+            >Email me: lavenderthyme@protonmail.com</a
+          >
+        </div>
+      </div>
+
+      <div class="form p-8 rounded-2xl shadow-xl w-full max-w-md mx-auto my-12">
+        <h1 class="text-2xl font-bold mb-6 text-center text-gray-800">
+          Book an Appointment / Enquire
+        </h1>
+
+        <form
+          method="POST"
+          action="https://formspree.io/f/mdagznoa"
+          class="space-y-4"
+        >
+          <input
+            type="text"
+            name="Name"
+            placeholder="Your Name"
+            required
+            class="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          />
+
+          <input
+            type="tel"
+            name="Phone"
+            placeholder="Your Phone Number (optional)"
+            class="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          />
+
+          <input
+            type="email"
+            name="Email"
+            placeholder="Your Email"
+            required
+            class="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          />
+
+          <textarea
+            name="Message"
+            placeholder="Message (optional)"
+            rows="6"
+            style="min-height:120px; resize: none;"
+            class="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          ></textarea>
+
+          <button
+            type="submit"
+            class="submit w-full text-white py-2 rounded-lg hover:bg-white transition"
+            >Submit</button
+          >
+        </form>
+      </div>
+    </section>
+
+    <section class="footer">
+      <div class="p-20">
+        <p>&copy; 2025 Sue Lyn Homeopathy</p>
+        <p>
+          Website by <a href="mailto:jcs207@outlook.com" class="link"
+            >Jaaziel</a>
+        </p>
+      </div>
+    </section>
+  </body>
+
+  <script type="module" src="/js/dropdown.js"></script>
 </html>

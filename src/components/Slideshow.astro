@@ -1,0 +1,47 @@
+<script type="module" src="/js/slideshow.js"></script>
+
+
+<div
+  id="slideshow"
+  class="slideshow-container"
+  aria-roledescription="carousel"
+  aria-label="Homepage slideshow"
+>
+  <div
+    class="slide active"
+    role="group"
+    aria-roledescription="slide"
+    aria-label="Slide 1 of 3"
+    style="background-image: url('/images/homeopathy-1.png');"
+  >
+  </div>
+  <div
+    class="slide"
+    role="group"
+    aria-roledescription="slide"
+    aria-label="Slide 2 of 3"
+    style="background-image: url('/images/homeopathy-2.png');"
+  >
+  </div>
+  <div
+    class="slide"
+    role="group"
+    aria-roledescription="slide"
+    aria-label="Slide 3 of 3"
+    style="background-image: url('/images/homeopathy-3.png');"
+  >
+  </div>
+  <!-- Ensure arrows are above slides and can receive pointer events -->
+  <button
+    class="arrow prev button-animation"
+    aria-label="Previous slide"
+    type="button"
+    style="z-index:9999; pointer-events:auto;">&#10094;</button
+  >
+  <button
+    class="arrow next button-animation"
+    aria-label="Next slide"
+    type="button"
+    style="z-index:9999; pointer-events:auto;">&#10095;</button
+  >
+</div>
