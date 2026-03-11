@@ -10,6 +10,18 @@
     --font-secondary: 'Playfair Display', serif;
 }
 
+.font-primary {
+    font-family: var(--font-primary);
+}
+
+.font-secondary {
+    font-family: var(--font-secondary);
+}
+
+.primary {
+    color: var(--primary-color);
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -63,20 +75,9 @@ h2 {
     }
 }
 
-.top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem 2rem;
-}
-
-.logo {
-    margin: 0;
-    padding: 0;
-}
 
 .logo img {
-    height: clamp(40px, 10vh, 150px);
+    max-height: 50px;
     width: auto;
     transition: all 0.3s ease;
 }
@@ -326,7 +327,6 @@ h2 {
 
 .extra-text {
     max-width: 900px;
-    font-size: clamp(10px, 3.5vh, 2rem);
     line-height: 1.6;
     text-align: left;
 }
@@ -402,8 +402,7 @@ h2 {
     height: 50vh;
     position: relative;
     overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px var(--box-shadow);
+    box-shadow: 0 0 1px;
 }
   
   .slide {
@@ -482,27 +481,15 @@ h2 {
     flex-direction: column;
     align-items: center;
     padding: 1.5rem 5%;
-    background-color: #53db35;
+    background: linear-gradient(70deg, var(--secondary-color), var(--primary-color), var(--secondary-color));
     border-top-right-radius: clamp(1rem, 8vw, 10rem);
     border-bottom-right-radius: clamp(1rem, 8vw, 10rem);
-}
-
-.faq h2 {
-    font-size: clamp(1.8rem, 4.5vh, 3rem);
-    margin-bottom: 1.5rem; 
-    color: white;
 }
 
 .faq div {
     max-width: 800px;
     margin-bottom: 1.5rem;
     width: 100%;
-}
-
-.faq h3 {
-    font-size: clamp(1.2rem, 3.5vh, 2.5rem);
-    color: white;
-    margin-bottom: 0.8rem;
 }
 
 .faq p {

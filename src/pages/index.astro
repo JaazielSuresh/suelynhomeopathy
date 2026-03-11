@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import Slideshow from "../components/Slideshow.astro";
+import Navbar from "../components/Navbar.astro";
 ---
 
 <!doctype html>
@@ -45,27 +46,7 @@ import Slideshow from "../components/Slideshow.astro";
 	
   </head>
   <body>
-    <div class="top">
-      <div class="logo">
-        <img src="images/logo.png" alt="Sue Lyn Homeopathy Logo" />
-      </div>
-      <div class="w-72">
-        <a href="https://www.homeopathy-soh.org/"
-          ><img
-            class="soh"
-            src="images/soh.png"
-            alt="society of homeopaths banner"
-          /></a
-        >
-      </div>
-      <div class="flex gap-2">
-        <i class="fas fa-envelope my-auto"></i>
-        <a
-          href="mailto:lavenderthyme@protonmail.com"
-          class="hover:underline m-0">lavenderthyme@protonmail.com</a
-        >
-      </div>
-    </div>
+	<Navbar />
     <section class="main-page">
       <div class="main-left">
         <div class="intro flex flex-col">
@@ -84,7 +65,7 @@ import Slideshow from "../components/Slideshow.astro";
                   >I'm Sue.</span>
               </h1>
               <p
-                class="text-3xl text-gray-700"
+                class="text-2xl text-gray-600"
                 style="font-family: var(--font-primary);"
               >
                 I am a homeopath, Graduated from the Contemporary College of
@@ -116,7 +97,7 @@ import Slideshow from "../components/Slideshow.astro";
           </div>
         </div>
 
-        <div class="extra-text fade-in">
+        <div class="extra-text fade-in text-2xl">
           <p>
             I offer a <span
               class="font-semibold"
@@ -137,7 +118,7 @@ import Slideshow from "../components/Slideshow.astro";
         <a href="#faq-section" class="btn-glass btn-right button-animation"
           >FAQ's</a
         >
-        <a href="#pricing-section" class="btn-glass btn-right button-animation"
+        <a href="#pricing-section" class="btn-glass btn-right button-animation "
           >Consultations</a
         >
       </div>
@@ -146,7 +127,7 @@ import Slideshow from "../components/Slideshow.astro";
     <section class="slideshow-section">
 		<Slideshow />
     </section>
-    <div class="more-info">
+    <div class="more-info text-gray-600">
       <p>
         For more information on homeopathy, please visit the <a
           class="underline"
@@ -156,11 +137,11 @@ import Slideshow from "../components/Slideshow.astro";
       </p>
     </div>
 
-    <section id="faq-section" class="my-20">
+    <section id="faq-section" class="my-20 text-white">
       <div class="faq">
-        <h2 class="text-left w-full">Frequently Asked Questions</h2>
+        <h2 class="text-left text-5xl my-6 w-full font-secondary">Frequently Asked Questions</h2>
         <div>
-          <h3>How many sessions do I need?</h3>
+          <h3 class="text-2xl my-4 font-secondary tracking-wide">How many sessions do I need?</h3>
           <p>
             That is hard to say. A simple acute case can usually be resolved
             quickly (covid, food poisoning, minor injuries), whereas a complex
@@ -170,7 +151,7 @@ import Slideshow from "../components/Slideshow.astro";
           </p>
         </div>
         <div>
-          <h3>Do I need my own kit?</h3>
+          <h3 class="text-2xl my-4 font-secondary tracking-wide">Do I need my own kit?</h3>
           <p>
             I would always recommend buying a kit if you plan to use homeopathy
             long term as it can come in very handy for emergency situations.
@@ -183,7 +164,7 @@ import Slideshow from "../components/Slideshow.astro";
     </section>
 
     <section id="pricing-section" class="pricing my-8">
-      <h2>Consultations</h2>
+      <h2 class="font-secondary">Consultations</h2>
       <div class="pricing-cards">
         <div id="card1">
           <h3>Initial consultation</h3>
@@ -203,7 +184,6 @@ import Slideshow from "../components/Slideshow.astro";
         Please enquire for more details.
       </p>
 
-      <h2>What happens at a consultation?</h2>
     </section>
 
     <section class="gradient-background pb-12">
@@ -219,7 +199,7 @@ import Slideshow from "../components/Slideshow.astro";
       </div>
 
       <div class="form p-8 rounded-2xl shadow-xl w-full max-w-md mx-auto my-12">
-        <h1 class="text-2xl font-bold mb-6 text-center text-gray-800">
+        <h1 class="text-2xl font-bold mb-6 text-center text-gray-800 font-secondary tracking-wide">
           Book an Appointment / Enquire
         </h1>
 
@@ -233,14 +213,14 @@ import Slideshow from "../components/Slideshow.astro";
             name="Name"
             placeholder="Your Name"
             required
-            class="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            class="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-green-400"
           />
 
           <input
             type="tel"
             name="Phone"
             placeholder="Your Phone Number (optional)"
-            class="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            class="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-green-400"
           />
 
           <input
@@ -248,7 +228,7 @@ import Slideshow from "../components/Slideshow.astro";
             name="Email"
             placeholder="Your Email"
             required
-            class="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            class="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-green-500"
           />
 
           <textarea
@@ -256,7 +236,7 @@ import Slideshow from "../components/Slideshow.astro";
             placeholder="Message (optional)"
             rows="6"
             style="min-height:120px; resize: none;"
-            class="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            class="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-green-500"
           ></textarea>
 
           <button
