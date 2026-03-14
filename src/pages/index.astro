@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import Slideshow from "../components/Slideshow.astro";
 import Navbar from "../components/Navbar.astro";
+import Consultations from "../components/Consultations.astro";
 ---
 
 <!doctype html>
@@ -162,36 +163,18 @@ import Navbar from "../components/Navbar.astro";
           </p>
         </div>
         <p class="font-secondary"> If you have any other questions, feel free to get in touch.</p>
-        <a href="#contact-section" class="w-80 md:h-16 h-20 btn-primary text-2xl md:text-xl mt-8 !no-underline !text-[#51bc31] flex justify-center items-center rounded-lg hover:scale-105 transition-all duration-300 ease-in-out">Contact</a>
+        <a href="#contact-section" class="w-60 h-16 btn-primary text-2xl md:text-xl mt-8 no-underline! text-[#51bc31]! flex justify-center items-center rounded-lg hover:scale-105 transition-all duration-300">Contact</a>
       </div>
     </section>
 
     <section id="pricing-section" class="pricing my-20">
-      <h2 class="font-secondary">Consultations</h2>
-      <div class="pricing-cards">
-        <div id="card1">
-          <h3>Initial consultation</h3>
-          <p>1-2 hours</p>
-        </div>
-        <div id="card2">
-          <h3>Follow up</h3>
-          <p>Time as necessary: 30 minutes - 1 hour</p>
-        </div>
-      </div>
-
-      <p>
-        Remedies / postage paid separately - usually between £10 - 15.
-        <br />
-        Includes support by email.
-        <br />
-        Please enquire for more details.
-      </p>
+      <Consultations />
 
     </section>
 
-    <section class="gradient-background pb-12">
-      <div class="contact-section" id="contact-section">
-        <div class="contact-container">
+    <section class="bg-[url('/images/colorFlow.jpg')] pb-40 bg-size-[100%_100%] md:bg-cover bg-top">
+      <div class="max-w-xl mx-auto py-12 px-4">
+        <div class="contact-container flex flex-col items-center text-center py-6 bg-white/20 border border-gray-200 rounded-2xl shadow-lg backdrop-blur-lg">
           <h2>Enquire</h2>
           <a
             href="mailto:lavenderthyme@protonmail.com"
@@ -199,60 +182,64 @@ import Navbar from "../components/Navbar.astro";
             >Email me: lavenderthyme@protonmail.com</a
           >
         </div>
-      </div>
 
-      <div class="form p-8 rounded-2xl shadow-xl w-full max-w-md mx-auto my-12">
-        <h1 class="text-2xl font-bold mb-6 text-center text-gray-800 font-secondary tracking-wide">
-          Book an Appointment / Enquire
-        </h1>
+        <h2 class="text-2xl text-white font-secondary text-center my-8">Or</h2>
 
-        <form
-          method="POST"
-          action="https://formspree.io/f/mdagznoa"
-          class="space-y-4"
-        >
-          <input
-            type="text"
-            name="Name"
-            placeholder="Your Name"
-            required
-            class="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-green-400"
-          />
+        <div class="bg-white/20 backdrop-blur-md border border-gray-200 p-8 rounded-2xl shadow-lg w-full">
+          <h1 class="text-3xl mb-6 text-center text-white font-secondary tracking-wide">
+            Book an Appointment / Enquire
+          </h1>
 
-          <input
-            type="tel"
-            name="Phone"
-            placeholder="Your Phone Number (optional)"
-            class="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-green-400"
-          />
-
-          <input
-            type="email"
-            name="Email"
-            placeholder="Your Email"
-            required
-            class="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-green-500"
-          />
-
-          <textarea
-            name="Message"
-            placeholder="Message (optional)"
-            rows="6"
-            style="min-height:120px; resize: none;"
-            class="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-green-500"
-          ></textarea>
-
-          <button
-            type="submit"
-            class="submit w-full text-white py-2 rounded-lg hover:bg-white transition"
-            >Submit</button
+          <form
+            method="POST"
+            action="https://formspree.io/f/mdagznoa"
+            class="space-y-4"
           >
-        </form>
+            <input
+              type="text"
+              name="Name"
+              placeholder="Name"
+              required
+              class="w-full border border-gray-200 rounded-lg p-2 focus:outline-none focus:ring-1 focus:ring-white placeholder-gray-200"
+            />
+
+            <input
+              type="tel"
+              name="Phone"
+              placeholder="Phone Number (optional)"
+                class="w-full border border-gray-200 rounded-lg p-2 focus:outline-none focus:ring-1 focus:ring-white placeholder-gray-200"
+              />
+
+            <input
+              type="email"
+              name="Email"
+              placeholder="Email"
+              required
+              class="w-full border border-gray-200 rounded-lg p-2 focus:outline-none focus:ring-1 focus:ring-white placeholder-gray-200"
+            />
+
+            <textarea
+              name="Message"
+              placeholder="Message (optional)"
+              rows="6"
+              style="min-height:120px; resize: none;"
+              class="w-full border border-gray-200 rounded-lg p-2 focus:outline-none focus:ring-1 focus:ring-white placeholder-gray-200"
+            ></textarea>
+
+            <button
+              type="submit"
+              class="submit w-full text-white py-4 rounded-lg bg-white border border-gray-200 hover:border-white hover:text-white transition-all hover:scale-102 hover:bg-transparent duration-300"
+              >Submit</button
+            >
+          </form>
+        </div>
       </div>
+
+
     </section>
 
     <section class="footer">
-      <div class="p-20">
+      <div class="pt-0 md:pt-20 p-20 text-center h-[50vh] text-sm">
         <p>&copy; 2025 Sue Lyn Homeopathy</p>
         <p>
           Website by <a href="mailto:jcs207@outlook.com" class="link"
@@ -261,6 +248,7 @@ import Navbar from "../components/Navbar.astro";
       </div>
     </section>
   </body>
-
   <script type="module" src="/js/dropdown.js"></script>
 </html>
+
+

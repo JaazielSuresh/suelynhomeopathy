@@ -517,63 +517,7 @@ h2 {
     flex-direction: column;
     align-items: center;
     text-align: center;
-}
-
-.pricing h2 {
-    font-size: clamp(1.8rem, 4.5vh, 3rem);
-    margin-bottom: 2rem;
-}
-
-.pricing-cards>div {
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 2rem;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-    min-height: 200px;
-}
-
-.pricing h3 {
-    font-size: clamp(1.2rem, 3.5vh, 2rem);
-    margin-block: 1rem;
-}
-
-.pricing p {
-    font-size: clamp(1rem, 2.5vh, 1.5rem);
-    margin: 0;
-}
-
-.pricing>p {
-    margin: 2rem auto;
-    font-size: clamp(0.9rem, 2vh, 1.3rem);
-    color: #666;
-    max-width: 600px;
-}
-
-.pricing-cards {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    max-width: 500px;
-    margin: 5%;
-}
-
-.pricing-cards>div {
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-.pricing-cards>div:hover {
-    transform: scale(1.01);
-    box-shadow: 0 0 2px white, 0 0 10px var(--box-shadow);
-}
-
-.pricing-cards>div:active {
-    transform: scale(0.99);
-    transition: transform 0.1s ease;
+    padding: 1rem;
 }
 
 #card1 {
@@ -613,15 +557,6 @@ h2 {
 
 /* payment */
 
-.contact-section,
-.payment-section {
-    padding: 2rem;
-    max-width: 800px;
-    margin: 0 auto;
-    transform: translateY(50px);
-    animation: slideUp 0.5s ease-out forwards;
-}
-
 .payment-section {
     animation-delay: 0.1s;
 }
@@ -643,24 +578,6 @@ h2 {
         padding: 0;
         margin-bottom: 2rem;
     }
-
-    .contact-container,
-    .payment-container {
-        border-radius: 0 !important;
-    }
-}
-
-.contact-container,
-.payment-container,
-.payment-amount {
-    padding: 1rem;
-    text-align: center;
-    background: rgba(255, 255, 255, 0.2);
-    border: 2px solid rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-radius: 16px;
-    box-shadow: 0 0 5px var(--box-shadow);
 }
 
 .contact-container h2,
@@ -825,18 +742,7 @@ h2 {
 }
 
 .submit {
-    background: linear-gradient(70deg, var(--secondary-color), var(--primary-color));
-    border: 2px solid var(--secondary-color);
-
-}
-
-.submit:hover {
-    background: white;
     color: var(--primary-color);
-}
-
-.form {
-    background: radial-gradient(circle at center, #ffffff 25%, #dedede 100%);
 }
 
 .link {
@@ -845,6 +751,20 @@ h2 {
 
 .link:hover {
     text-decoration: underline;
+}
 
+.vertical-connector {
+width: 2px;
+background-color: #e5e7eb;
+position: absolute;
+left: 1.25rem;
+top: 2.5rem;
+bottom: -1rem;
+z-index: 0;
+}
 
+#one:hover, #two:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--primary-color);
+    color: white;
 }
