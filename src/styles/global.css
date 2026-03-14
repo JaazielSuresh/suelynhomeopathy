@@ -44,12 +44,12 @@ body {
         width: 100%;
         overflow-x: hidden;
     }
-    
+
     .main-right {
         width: 100%;
         max-width: 100%;
     }
-    
+
     .contact-section,
     .payment-section {
         width: 100%;
@@ -102,7 +102,7 @@ h2 {
         flex-direction: column;
         padding: 1rem;
     }
-    
+
     .navigation {
         justify-content: center;
     }
@@ -184,10 +184,10 @@ h2 {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -25px; 
+    bottom: -25px;
     height: 40px;
     background-color: white;
-    transform: skewY(-4deg); 
+    transform: skewY(-4deg);
 }
 
 @media(max-width: 1000px) {
@@ -195,6 +195,7 @@ h2 {
         width: 100%;
         height: fit-content;
         padding-block: 2rem;
+        margin-block: 3rem;
     }
 
     .main-right::before {
@@ -248,11 +249,18 @@ h2 {
     transition: transform 0.1s ease;
 }
 
-@media(max-width: 800px) {
+@media(max-width: 1000px) {
     .btn-right {
         width: min(60%, 15rem);
         height: min(4rem, 6rem);
         border-radius: 1vh;
+    }
+
+    .main-right h2 {
+        color: white;
+        font-weight: 300;
+        max-width: 90%;
+        font-size: clamp(1.2rem, 4vh, 2.5rem);
     }
 }
 
@@ -277,24 +285,27 @@ h2 {
 
 @keyframes fadeIn {
     from {
-      opacity: 0;
-      transform: translateY(30px);
+        opacity: 0;
+        transform: translateY(30px);
     }
+
     to {
-      opacity: 1;
-      transform: translateY(0);
+        opacity: 1;
+        transform: translateY(0);
     }
 
-  }  .fade-in {
-    opacity: 0;
-    animation: fadeIn 0.5s ease-out forwards;
-  }
+}
 
-  .fade-in-right {
+.fade-in {
     opacity: 0;
     animation: fadeIn 0.5s ease-out forwards;
-    animation-delay: 0.2s; 
-  }
+}
+
+.fade-in-right {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out forwards;
+    animation-delay: 0.2s;
+}
 
 .intro {
     margin: 5% 0px;
@@ -391,9 +402,10 @@ h2 {
 .slideshow-section {
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     padding: 2rem 0;
-    margin-top: 5%;
     background-color: white;
 }
 
@@ -404,8 +416,8 @@ h2 {
     overflow: hidden;
     box-shadow: 0 0 1px;
 }
-  
-  .slide {
+
+.slide {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -417,14 +429,14 @@ h2 {
     background-repeat: no-repeat;
     transition: opacity 0.3s ease-in-out;
     background-color: white;
-  }
-  
-  .slide.active {
+}
+
+.slide.active {
     opacity: 1;
     z-index: 1;
-  }
-  
-  .arrow {
+}
+
+.arrow {
     position: absolute;
     top: 40%;
     background: rgba(255, 255, 255, 0.7);
@@ -434,41 +446,31 @@ h2 {
     cursor: pointer;
     z-index: 2;
     user-select: none;
-  }
-  
-  .arrow.prev {
-    left: 10px;
-  }
-  
-  .arrow.next {
-    right: 10px;
-  }
-  
-@media (max-width: 600px) {
-  .slideshow-container {
-    height: 35vh;
-  }
-
-  .arrow {
-    display: none;
-  }
 }
 
-.more-info {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: clamp(10px, 3vh, 2rem);
-    margin: 0 5%;
-    text-align: center;
-    flex-wrap: wrap;
-    word-break: break-word;
+.arrow.prev {
+    left: 10px;
+}
+
+.arrow.next {
+    right: 10px;
+}
+
+@media (max-width: 600px) {
+    .slideshow-container {
+        height: 35vh;
+    }
+
+    .arrow {
+        display: none;
+    }
 }
 
 @media (max-width: 768px) {
     #faq-section {
         padding-right: 0;
     }
+
     .faq {
         min-width: 100%;
         border-radius: 0 !important;
@@ -522,7 +524,7 @@ h2 {
     margin-bottom: 2rem;
 }
 
-.pricing-cards > div {
+.pricing-cards>div {
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 2rem;
@@ -544,7 +546,7 @@ h2 {
     margin: 0;
 }
 
-.pricing > p {
+.pricing>p {
     margin: 2rem auto;
     font-size: clamp(0.9rem, 2vh, 1.3rem);
     color: #666;
@@ -559,17 +561,17 @@ h2 {
     margin: 5%;
 }
 
-.pricing-cards > div {
+.pricing-cards>div {
     transition: all 0.3s ease;
     cursor: pointer;
 }
 
-.pricing-cards > div:hover {
+.pricing-cards>div:hover {
     transform: scale(1.01);
     box-shadow: 0 0 2px white, 0 0 10px var(--box-shadow);
 }
 
-.pricing-cards > div:active {
+.pricing-cards>div:active {
     transform: scale(0.99);
     transition: transform 0.1s ease;
 }
@@ -596,12 +598,12 @@ h2 {
         justify-content: center;
         margin: 0;
     }
-    
-    .pricing-cards > div {
+
+    .pricing-cards>div {
         flex: 1;
     }
-    
-    .pricing > p {
+
+    .pricing>p {
         width: 100%;
         max-width: 700px;
         text-align: center;
@@ -628,12 +630,14 @@ h2 {
     0% {
         transform: translateY(50px);
     }
+
     100% {
         transform: translateY(0);
     }
 }
 
 @media (max-width: 768px) {
+
     .contact-section,
     .payment-section {
         padding: 0;
@@ -651,12 +655,12 @@ h2 {
 .payment-amount {
     padding: 1rem;
     text-align: center;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.2);
     border: 2px solid rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-radius: 16px;
-    box-shadow: 0 0 20px var(--box-shadow);
+    box-shadow: 0 0 5px var(--box-shadow);
 }
 
 .contact-container h2,
@@ -801,6 +805,7 @@ h2 {
         height: 300px;
         left: -5%;
     }
+
     .circle2 {
         display: none;
     }
@@ -841,5 +846,5 @@ h2 {
 .link:hover {
     text-decoration: underline;
 
-    
+
 }
