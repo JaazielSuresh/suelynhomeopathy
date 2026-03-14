@@ -108,11 +108,11 @@ import Navbar from "../components/Navbar.astro";
         </div>
       </div>
 
-      <div class="main-right fade-in-right gradient-background py-12">
+      <div class="main-right fade-in-right gradient-background py-12 mt-10">
         <h2 style="font-family: var(--font-secondary);font-weight: 100;">
           Request a private consultation <span class="font-medium">today.</span>
         </h2>
-        <a href="payment.html" class="btn-primary btn-right button-animation"
+        <a href="#contact-section" class="btn-primary btn-right button-animation"
           >Contact</a
         >
         <a href="#faq-section" class="btn-glass btn-right button-animation"
@@ -124,24 +124,25 @@ import Navbar from "../components/Navbar.astro";
       </div>
     </section>
 
-    <section class="slideshow-section">
-		<Slideshow />
+    <section class="slideshow-section my-24">
+		  <Slideshow />
+      <div class="text-xl mt-4 text-gray-600 text-center">
+        <p>
+          For more information on homeopathy, please visit the <a
+            class="underline"
+            href="https://www.homeopathy-soh.org/"
+            target="_blank">Society of Homeopaths</a
+          > website.
+        </p>
+      </div>
     </section>
-    <div class="more-info text-gray-600">
-      <p>
-        For more information on homeopathy, please visit the <a
-          class="underline"
-          href="https://www.homeopathy-soh.org/"
-          target="_blank">Society of Homeopaths</a
-        > website.
-      </p>
-    </div>
 
-    <section id="faq-section" class="my-20 text-white">
+
+    <section id="faq-section" class="my-24 text-white">
       <div class="faq">
         <h2 class="text-left text-5xl my-6 w-full font-secondary">Frequently Asked Questions</h2>
         <div>
-          <h3 class="text-2xl my-4 font-secondary tracking-wide">How many sessions do I need?</h3>
+          <h3 class="text-4xl md:text-3xl my-4 font-secondary tracking-wide">How many sessions do I need?</h3>
           <p>
             That is hard to say. A simple acute case can usually be resolved
             quickly (covid, food poisoning, minor injuries), whereas a complex
@@ -151,7 +152,7 @@ import Navbar from "../components/Navbar.astro";
           </p>
         </div>
         <div>
-          <h3 class="text-2xl my-4 font-secondary tracking-wide">Do I need my own kit?</h3>
+          <h3 class="text-4xl md:text-3xl my-4 font-secondary tracking-wide">Do I need my own kit?</h3>
           <p>
             I would always recommend buying a kit if you plan to use homeopathy
             long term as it can come in very handy for emergency situations.
@@ -160,10 +161,12 @@ import Navbar from "../components/Navbar.astro";
             >
           </p>
         </div>
+        <p class="font-secondary"> If you have any other questions, feel free to get in touch.</p>
+        <a href="#contact-section" class="w-80 md:h-16 h-20 btn-primary text-2xl md:text-xl mt-8 !no-underline !text-[#51bc31] flex justify-center items-center rounded-lg hover:scale-105 transition-all duration-300 ease-in-out">Contact</a>
       </div>
     </section>
 
-    <section id="pricing-section" class="pricing my-8">
+    <section id="pricing-section" class="pricing my-20">
       <h2 class="font-secondary">Consultations</h2>
       <div class="pricing-cards">
         <div id="card1">
@@ -187,7 +190,7 @@ import Navbar from "../components/Navbar.astro";
     </section>
 
     <section class="gradient-background pb-12">
-      <div class="contact-section">
+      <div class="contact-section" id="contact-section">
         <div class="contact-container">
           <h2>Enquire</h2>
           <a
