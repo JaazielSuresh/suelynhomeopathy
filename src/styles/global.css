@@ -500,16 +500,6 @@ h2 {
     color: white;
 }
 
-.faq a {
-    color: inherit;
-    text-decoration: underline;
-    transition: color 0.3s ease;
-}
-
-.faq a:hover {
-    color: #888;
-}
-
 /*Pricing*/
 
 .pricing {

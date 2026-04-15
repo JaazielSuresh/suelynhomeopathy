@@ -3,6 +3,7 @@ import "../styles/global.css";
 import Slideshow from "../components/Slideshow.astro";
 import Navbar from "../components/Navbar.astro";
 import Consultations from "../components/Consultations.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <!doctype html>
@@ -163,16 +164,20 @@ import Consultations from "../components/Consultations.astro";
           </p>
         </div>
         <p class="font-secondary"> If you have any other questions, feel free to get in touch.</p>
-        <a href="#contact-section" class="w-60 h-16 btn-primary text-2xl md:text-xl mt-8 no-underline! text-[#51bc31]! flex justify-center items-center rounded-lg hover:scale-105 transition-all duration-300">Contact</a>
+            <a href="#contact-section"
+              class="w-40 rounded-lg my-5 text-[#51bc31]! text-center py-4 border bg-white border-gray-200 hover:border-white hover:text-white! transition-all hover:scale-102 hover:bg-transparent duration-300"
+              >Contact
+            </a>
       </div>
     </section>
 
     <section id="pricing-section" class="pricing my-20">
       <Consultations />
-
     </section>
 
-    <section class="bg-[url('/images/colorFlow.jpg')] pb-40 bg-size-[100%_100%] md:bg-cover bg-top">
+    <section class="bg-[url('/images/colorFlow.jpg')] pb-40 bg-size-[100%_100%] bg-top"
+      id="contact-section"
+    >
       <div class="max-w-xl mx-auto py-12 px-4">
         <div class="contact-container flex flex-col items-center text-center py-6 bg-white/20 border border-gray-200 rounded-2xl shadow-lg backdrop-blur-lg">
           <h2>Enquire</h2>
@@ -200,14 +205,14 @@ import Consultations from "../components/Consultations.astro";
               name="Name"
               placeholder="Name"
               required
-              class="w-full border border-gray-200 rounded-lg p-2 focus:outline-none focus:ring-1 focus:ring-white placeholder-gray-200"
+              class="w-full border border-gray-100 rounded-lg p-2 focus:outline-none focus:ring-1 focus:ring-white placeholder-gray-100"
             />
 
             <input
               type="tel"
               name="Phone"
               placeholder="Phone Number (optional)"
-                class="w-full border border-gray-200 rounded-lg p-2 focus:outline-none focus:ring-1 focus:ring-white placeholder-gray-200"
+                class="w-full border border-gray-100 rounded-lg p-2 focus:outline-none focus:ring-1 focus:ring-white placeholder-gray-100"
               />
 
             <input
@@ -215,7 +220,7 @@ import Consultations from "../components/Consultations.astro";
               name="Email"
               placeholder="Email"
               required
-              class="w-full border border-gray-200 rounded-lg p-2 focus:outline-none focus:ring-1 focus:ring-white placeholder-gray-200"
+              class="w-full border border-gray-100 rounded-lg p-2 focus:outline-none focus:ring-1 focus:ring-white placeholder-gray-100"
             />
 
             <textarea
@@ -223,12 +228,12 @@ import Consultations from "../components/Consultations.astro";
               placeholder="Message (optional)"
               rows="6"
               style="min-height:120px; resize: none;"
-              class="w-full border border-gray-200 rounded-lg p-2 focus:outline-none focus:ring-1 focus:ring-white placeholder-gray-200"
+              class="w-full border border-gray-100 rounded-lg p-2 focus:outline-none focus:ring-1 focus:ring-white placeholder-gray-100"
             ></textarea>
 
             <button
               type="submit"
-              class="submit w-full text-white py-4 rounded-lg bg-white border border-gray-200 hover:border-white hover:text-white transition-all hover:scale-102 hover:bg-transparent duration-300"
+              class="submit w-full text-white py-4 rounded-lg bg-white border border-gray-100 hover:border-white hover:text-white transition-all hover:scale-102 hover:bg-transparent duration-300"
               >Submit</button
             >
           </form>
@@ -239,13 +244,7 @@ import Consultations from "../components/Consultations.astro";
     </section>
 
     <section class="footer">
-      <div class="pt-0 md:pt-20 p-20 text-center h-[50vh] text-sm">
-        <p>&copy; 2025 Sue Lyn Homeopathy</p>
-        <p>
-          Website by <a href="mailto:jcs207@outlook.com" class="link"
-            >Jaaziel</a>
-        </p>
-      </div>
+      <Footer />
     </section>
   </body>
   <script type="module" src="/js/dropdown.js"></script>
