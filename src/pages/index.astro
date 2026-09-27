@@ -247,8 +247,25 @@ import Footer from "../components/Footer.astro";
     <section class="footer">
       <Footer />
     </section>
-  </body>
   <script type="module" src="/js/dropdown.js"></script>
+  <script>
+    import Lenis from "lenis";
+    import "lenis/dist/lenis.css";
+
+    const lenis = new Lenis({
+      autoRaf: true,
+      anchors: true,
+    });
+
+    declare global {
+      interface Window {
+        lenis: Lenis;
+      }
+    }
+
+    window.lenis = lenis;
+  </script>
+</body>
 </html>
 
 

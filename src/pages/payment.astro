@@ -73,4 +73,21 @@ import '../styles/global.css';
             Please enquire for more details.
         </p>
     </section>
+    <script>
+      import Lenis from "lenis";
+      import "lenis/dist/lenis.css";
+
+      const lenis = new Lenis({
+        autoRaf: true,
+        anchors: true,
+      });
+
+      declare global {
+        interface Window {
+          lenis: Lenis;
+        }
+      }
+
+      window.lenis = lenis;
+    </script>
 </body>    
