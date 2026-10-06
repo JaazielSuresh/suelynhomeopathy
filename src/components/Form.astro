@@ -1,5 +1,5 @@
 ---
-const { lang = 'en' } = Astro.props;
+const { lang = "en" } = Astro.props;
 
 const t = {
   en: {
@@ -8,7 +8,7 @@ const t = {
     email: "Email",
     phone: "Phone Number (optional)",
     message: "Message",
-    submit: "Submit"
+    submit: "Submit",
   },
   zh: {
     name: "姓名",
@@ -16,14 +16,14 @@ const t = {
     email: "电子邮件",
     phone: "电话号码（可选）",
     message: "留言",
-    submit: "提交"
-  }
+    submit: "提交",
+  },
 };
 const i18n = t[lang as keyof typeof t];
 ---
 
 <div
-  class="bg-black/10 backdrop-blur-lg border border-gray-300 p-8 rounded-2xl shadow-lg w-full"
+  class="bg-black/10 backdrop-blur-lg border border-gray-300 px-4 py-8 rounded-2xl shadow-lg w-full"
 >
   <form
     id="contact-form"
@@ -56,8 +56,16 @@ const i18n = t[lang as keyof typeof t];
           class="hidden absolute right-3.5 top-1/2 -translate-y-1/2 text-white pointer-events-none"
           aria-hidden="true"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-6 h-6"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+              clip-rule="evenodd"></path>
           </svg>
         </span>
       </div>
@@ -86,7 +94,8 @@ const i18n = t[lang as keyof typeof t];
 </div>
 
 <style>
-  input, textarea {
+  input,
+  textarea {
     background-color: transparent !important;
   }
   input:-webkit-autofill,
@@ -99,14 +108,22 @@ const i18n = t[lang as keyof typeof t];
 </style>
 
 <script>
-  const form = document.getElementById("contact-form") as HTMLFormElement | null;
-  const submitBtn = document.getElementById("submit-btn") as HTMLButtonElement | null;
-  const emailInput = document.getElementById("email-input") as HTMLInputElement | null;
+  const form = document.getElementById(
+    "contact-form",
+  ) as HTMLFormElement | null;
+  const submitBtn = document.getElementById(
+    "submit-btn",
+  ) as HTMLButtonElement | null;
+  const emailInput = document.getElementById(
+    "email-input",
+  ) as HTMLInputElement | null;
   const emailHelper = document.getElementById("email-helper");
   const emailValidIcon = document.getElementById("email-valid-icon");
 
   if (form && submitBtn) {
-    const requiredInputs = form.querySelectorAll<HTMLInputElement | HTMLTextAreaElement>("[required]");
+    const requiredInputs = form.querySelectorAll<
+      HTMLInputElement | HTMLTextAreaElement
+    >("[required]");
 
     const checkFormValidity = () => {
       const hasText = !!emailInput?.value.trim();

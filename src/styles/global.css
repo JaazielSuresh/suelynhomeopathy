@@ -495,12 +495,6 @@ h2 {
     width: 100%;
 }
 
-.faq p {
-    font-size: clamp(1rem, 3vh, 2rem);
-    line-height: 1.5;
-    color: white;
-}
-
 /*Pricing*/
 
 .pricing {
