@@ -1,4 +1,6 @@
 ---
+import '@fontsource-variable/dm-sans';
+import '@fontsource-variable/playfair-display';
 import "../styles/global.css";
 import Slideshow from "../components/Slideshow.astro";
 import Navbar from "../components/Navbar.astro";
@@ -27,13 +29,6 @@ import Form from "../components/Form.astro";
     <!-- Preload hero image for LCP -->
     <link rel="preload" as="image" href="/images/pfp.webp" type="image/webp" />
 
-    <!-- Google Fonts Optimized -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..600;1,9..40,300..600&family=Playfair+Display:ital,wght@0,400..700;1,400..700&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <body>
     <Navbar />
