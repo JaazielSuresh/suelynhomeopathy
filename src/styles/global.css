@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-    --primary-color: #51bc31;
+    --primary-color: #38c00e;
     --secondary-color: #8dff21;
     --tertiary-color: #d3ff6e;
     --text-color: #333;
@@ -22,6 +22,7 @@
     color: var(--primary-color);
 }
 
+html,
 body {
     margin: 0;
     padding: 0;
@@ -161,6 +162,7 @@ h2 {
     align-items: center;
     text-align: center;
     justify-content: space-between;
+    padding-block: 4rem;
 }
 
 .gradient-background {
@@ -194,7 +196,7 @@ h2 {
     .main-right {
         width: 100%;
         height: fit-content;
-        padding-block: 2rem;
+        padding-block: 5rem;
         margin-block: 3rem;
     }
 
@@ -743,16 +745,17 @@ h2 {
 }
 
 .vertical-connector {
-width: 2px;
-background-color: #e5e7eb;
-position: absolute;
-left: 1.25rem;
-top: 2.5rem;
-bottom: -1rem;
-z-index: 0;
+    width: 2px;
+    background-color: #e5e7eb;
+    position: absolute;
+    left: 1.25rem;
+    top: 2.5rem;
+    bottom: -1rem;
+    z-index: 0;
 }
 
-#one:hover, #two:hover {
+#one:hover,
+#two:hover {
     background-color: var(--secondary-color);
     border-color: var(--primary-color);
     color: white;

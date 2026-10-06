@@ -1,28 +1,97 @@
+---
+const { lang = "en" } = Astro.props;
+
+const t = {
+  en: {
+    homeopathy: "Homeopathy",
+    getInTouch: "Get in Touch",
+    contact: "Contact",
+    email: "Email",
+    explore: "Explore",
+    consultations: "Consultations",
+    faq: "FAQ",
+    soh: "Society of Homeopaths",
+    copyright: "© 2026 Sunrise Homeopathy",
+    websiteBy: "Website by",
+  },
+  zh: {
+    homeopathy: "顺势疗法",
+    getInTouch: "联系我们",
+    contact: "联系",
+    email: "电邮",
+    explore: "探索",
+    consultations: "咨询服务",
+    faq: "常见问题",
+    soh: "顺势疗法协会",
+    copyright: "© 2026 Sunrise 顺势疗法",
+    websiteBy: "网站设计:",
+  },
+};
+const i18n = t[lang as keyof typeof t];
+---
+
 <footer class="relative overflow-hidden bg-white text-black z-10">
   <!-- Top section -->
   <div class="max-w-7xl mx-auto px-8 pt-16 pb-12">
     <div class="flex flex-col md:flex-row justify-between items-start gap-12">
       <!-- Logo / Branding -->
       <div class="flex items-center gap-3">
-        <img src="/images/logo.png" alt="Logo" class="h-20 w-auto opacity-80" />
+        <img
+          src="/images/logo.png"
+          alt="Logo"
+          width="80"
+          height="80"
+          loading="lazy"
+          decoding="async"
+          class="h-20 w-auto opacity-80"
+        />
         <div class="flex flex-col">
-          <span class="text-3xl font-secondary tracking-wide opacity-90">S.L. Suresh</span>
-          <span class="text-sm font-light tracking-widest uppercase opacity-60">Homeopathy</span>
+          <span class="text-3xl font-secondary tracking-wide opacity-90"
+            >S.L. Suresh</span
+          >
+          <span class="text-sm font-light tracking-widest uppercase opacity-60"
+            >{i18n.homeopathy}</span
+          >
         </div>
       </div>
 
       <!-- Navigation columns -->
       <div class="flex gap-16 text-sm">
         <div class="flex flex-col gap-3">
-          <span class="text-xs uppercase tracking-widest opacity-50 mb-1">Get in Touch</span>
-          <a href="#contact-section" class="opacity-80 hover:opacity-100 transition-opacity">Contact</a>
-          <a href="mailto:lavenderthyme@protonmail.com" class="opacity-80 hover:opacity-100 transition-opacity">Email</a>
+          <span class="text-xs uppercase tracking-widest opacity-50 mb-1"
+            >{i18n.getInTouch}</span
+          >
+          <a
+            href="#contact-section"
+            class="opacity-80 hover:opacity-100 transition-opacity"
+            >{i18n.contact}</a
+          >
+          <a
+            href="mailto:lavenderthyme@protonmail.com"
+            class="opacity-80 hover:opacity-100 transition-opacity"
+            >{i18n.email}</a
+          >
         </div>
         <div class="flex flex-col gap-3">
-          <span class="text-xs uppercase tracking-widest opacity-50 mb-1">Explore</span>
-          <a href="#pricing-section" class="opacity-80 hover:opacity-100 transition-opacity">Consultations</a>
-          <a href="#faq-section" class="opacity-80 hover:opacity-100 transition-opacity">FAQ</a>
-          <a href="https://www.homeopathy-soh.org/" target="_blank" class="opacity-80 hover:opacity-100 transition-opacity">Society of Homeopaths</a>
+          <span class="text-xs uppercase tracking-widest opacity-50 mb-1"
+            >{i18n.explore}</span
+          >
+          <a
+            href="#pricing-section"
+            class="opacity-80 hover:opacity-100 transition-opacity"
+            >{i18n.consultations}</a
+          >
+          <a
+            href="#faq-section"
+            class="opacity-80 hover:opacity-100 transition-opacity"
+            >{i18n.faq}</a
+          >
+          <a
+            href="https://www.homeopathy-soh.org/"
+            target="_blank"
+            class="opacity-80 hover:opacity-100 transition-opacity"
+            >{i18n.soh}</a
+          >
         </div>
       </div>
     </div>
@@ -35,15 +104,27 @@
 
   <!-- Bottom bar -->
   <div class="max-w-7xl mx-auto px-8 py-6">
-    <div class="flex flex-col sm:flex-row justify-between items-center gap-2 text-xs opacity-50">
-      <p>&copy; 2026 Sue Lyn Homeopathy</p>
-      <p>Website by <a href="mailto:jcs207@outlook.com" class="underline hover:opacity-80 transition-opacity">Jaaziel</a></p>
+    <div
+      class="flex flex-col sm:flex-row justify-between items-center gap-2 text-xs opacity-50"
+    >
+      <p>{i18n.copyright}</p>
+      <p>
+        {i18n.websiteBy}
+        <a
+          href="mailto:jcs207@outlook.com"
+          class="underline hover:opacity-80 transition-opacity">Jaaziel</a
+        >
+      </p>
     </div>
   </div>
 
   <!-- Large decorative text -->
-  <div class="w-full h-40 sm:h-60 relative overflow-hidden leading-none pointer-events-none select-none">
-    <div class="absolute left-1/2 -translate-x-1/2 -bottom-1 md:-bottom-2 flex font-secondary text-[22vw] sm:text-[16vw] whitespace-nowrap">
+  <div
+    class="w-full h-40 sm:h-60 relative overflow-hidden leading-none pointer-events-none select-none"
+  >
+    <div
+      class="absolute left-1/2 -translate-x-1/2 -bottom-1 md:-bottom-2 flex font-secondary text-[22vw] sm:text-[16vw] whitespace-nowrap"
+    >
       <span class="text-[#51bc31]/30">Sunrise</span>
       <span class="text-[#51bc31]/55">Sunrise</span>
       <span class="text-[#51bc31]/30">Sunrise</span>

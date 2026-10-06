@@ -1,25 +1,84 @@
-<nav class="border-b border-gray-100 md:sticky top-0 backdrop-blur-md z-50 bg-white/60 shadow-sm">
-    <div class="max-w-7xl mx-auto px-4">
-        <div class="flex flex-col md:flex-row items-center justify-between pb-2 sm:px-4">
-            <div class="flex items-center" data-purpose="site-branding">
-                <div class="flex flex-col slide-in-left">
+---
+const { lang = "en" } = Astro.props;
+const t = {
+    en: {
+        homeopathy: "Homeopathy",
+        toggleUrl: "/zh",
+        toggleText: "中文",
+    },
+    zh: {
+        homeopathy: "顺势疗法",
+        toggleUrl: "/",
+        toggleText: "EN",
+    },
+};
+const i18n = t[lang as keyof typeof t];
+---
+
+<nav
+    class="border-b border-gray-100 md:sticky top-0 backdrop-blur-md z-50 bg-white/70 shadow-sm md:h-20 flex items-center py-3 md:py-0 overflow-hidden"
+>
+    <div class="max-w-7xl mx-auto px-4 w-full">
+        <div
+            class="flex flex-col md:flex-row items-start md:items-center justify-between gap-3 md:gap-6 sm:px-4"
+        >
+            <div class="flex items-center gap-3" data-purpose="site-branding">
+                <div class="flex flex-col slide-in-left text-left">
                     <span
-                        class="text-2xl font-secondary tracking-wide primary"
-                        >S.L. Suresh</span
+                        class="text-2xl font-secondary tracking-wide primary leading-tight"
+                        >Sunrise</span
                     >
                     <span
-                        class="text-sm font-light tracking-widest uppercase text-gray-500"
-                        >Homeopathy</span
+                        class="text-xs font-light tracking-widest uppercase text-gray-500"
+                        >{i18n.homeopathy}</span
                     >
                 </div>
-                <img src="/images/logo.png" alt="Logo" class="h-14 w-auto fade-in transition-all duration-300 hover:scale-110" />
+                <img
+                    src="/images/logo.png"
+                    alt="Logo"
+                    width="48"
+                    height="48"
+                    class="h-12 w-auto fade-in transition-all duration-300 hover:scale-105"
+                />
             </div>
-            <a href="https://www.homeopathy-soh.org/">
-                <img class="soh max-h-14 fade-in transition-all duration-300 hover:scale-105" src="images/soh.png" alt="society of homeopaths banner" />
+            <a
+                href="https://www.homeopathy-soh.org/"
+                class="self-start md:self-auto flex items-center"
+            >
+                <img
+                    class="soh h-10 md:h-11 w-auto object-contain fade-in transition-all duration-300 hover:scale-105"
+                    src="/images/soh.png"
+                    alt="society of homeopaths banner"
+                    width="235"
+                    height="44"
+                />
             </a>
-            <div class="flex gap-2 slide-in-right">
-                <i class="fas fa-envelope my-auto" />
-                <a href="mailto:lavenderthyme@protonmail.com" class="hover:underline m-0">lavenderthyme@protonmail.com</a>
+            <div
+                class="flex gap-2.5 slide-in-right self-start md:self-auto items-center text-sm md:text-base text-gray-700"
+            >
+                <svg
+                    class="w-4 h-4 text-[#51bc31] shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                >
+                    <path
+                        d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"
+                    ></path>
+                    <path
+                        d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
+                    ></path>
+                </svg>
+                <a
+                    href="mailto:lavenderthyme@protonmail.com"
+                    class="hover:underline transition-colors hover:text-green-700"
+                    >lavenderthyme@protonmail.com</a
+                >
+                <span class="text-gray-300 mx-1">|</span>
+                <a
+                    href={i18n.toggleUrl}
+                    class="font-medium hover:text-[#51bc31] transition-colors"
+                    >{i18n.toggleText}</a
+                >
             </div>
         </div>
     </div>

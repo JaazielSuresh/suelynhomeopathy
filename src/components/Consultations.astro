@@ -1,5 +1,38 @@
+---
+const { lang = 'en' } = Astro.props;
+
+const t = {
+  en: {
+    title: "Consultations",
+    step1Title: "Initial consultation",
+    step1Time: "1-2 hours",
+    step1Desc1: "Talk about your health concerns and goals",
+    step1Desc2: "Offer personalized remedies",
+    step2Title: "Follow up",
+    step2Time: "Time as necessary: 30 minutes – 1 hour",
+    step2Desc1: "Discuss your progress and how best to continue your healing journey",
+    footer1: "Remedies / postage paid separately – usually between £10 – 15.",
+    footer2: "Includes support by email.",
+    footer3: "Please enquire for more details."
+  },
+  zh: {
+    title: "咨询服务",
+    step1Title: "初次咨询",
+    step1Time: "1-2 小时",
+    step1Desc1: "探讨您的健康问题和目标",
+    step1Desc2: "提供个性化的顺势疗法处方",
+    step2Title: "复诊",
+    step2Time: "视需要而定：30分钟 – 1小时",
+    step2Desc1: "讨论您的进展以及如何最好地继续您的康复之旅",
+    footer1: "药剂及邮费另付 – 通常在 10 – 15 英镑之间。",
+    footer2: "包含通过电子邮件的后续支持。",
+    footer3: "详情请咨询。"
+  }
+};
+const i18n = t[lang as keyof typeof t];
+---
 <main class="w-full max-w-lg mx-auto">
-  <h1 class="text-5xl font-secondary mb-12">Consultations</h1>
+  <h2 class="text-4xl font-secondary mb-12">{i18n.title}</h2>
 
   <section class="space-y-8 relative" data-purpose="consultation-flow">
     <div class="relative flex gap-4 md:gap-8 items-start">
@@ -8,48 +41,47 @@
       <div
         class="z-10 shrink-0 w-10 h-10 rounded-full border-2 border-gray-300 bg-white flex items-center justify-center font-bold text-gray-500 transition-all duration-300"
         id="one"
-        >
+      >
         1
       </div>
 
       <article
         class="grow p-6 rounded-2xl card-shadow flex flex-col justify-center transition-all hover:scale-95"
         id="card1"
-        >
-        <h2 class="text-2xl font-semibold mb-2">Initial consultation</h2>
+      >
+        <h2 class="text-2xl font-semibold mb-2">{i18n.step1Title}</h2>
         <ul class="text-lg opacity-90 text-left list-disc ml-4">
-            <li>1-2 hours</li>
-            <li>Talk about your health concerns and goals</li>
-            <li>Offer personalized remedies</li>
+          <li>{i18n.step1Time}</li>
+          <li>{i18n.step1Desc1}</li>
+          <li>{i18n.step1Desc2}</li>
         </ul>
-
       </article>
     </div>
     <div class="relative flex gap-4 md:gap-8 items-start">
       <div
         class="z-10 shrink-0 w-10 h-10 rounded-full border-2 border-gray-300 flex items-center justify-center font-bold text-gray-500 transition-all duration-300"
         id="two"
-        >
+      >
         2
       </div>
 
       <article
         class="grow p-6 rounded-2xl card-shadow flex flex-col justify-center transition-all hover:scale-95"
         id="card2"
-        >
-        <h2 class="text-2xl font-semibold text-gray-900 mb-2">Follow up</h2>
+      >
+        <h2 class="text-2xl font-semibold text-gray-900 mb-2">{i18n.step2Title}</h2>
         <ul class="text-gray-600 text-lg opacity-90 text-left list-disc ml-4">
-          <li>Time as necessary: 30 minutes – 1 hour</li>
-          <li>Discuss your progress and how best to continue your healing journey</li>
+          <li>{i18n.step2Time}</li>
+          <li>{i18n.step2Desc1}</li>
         </ul>
       </article>
     </div>
   </section>
   <footer class="mt-12 text-center" data-purpose="pricing-and-support">
     <div class="space-y-3 text-gray-500 text-sm leading-relaxed px-4">
-      <p>Remedies / postage paid separately – usually between £10 – 15.</p>
-      <p>Includes support by email.</p>
-      <p class="font-medium text-gray-700">Please enquire for more details.</p>
+      <p>{i18n.footer1}</p>
+      <p>{i18n.footer2}</p>
+      <p class="font-medium text-gray-700">{i18n.footer3}</p>
     </div>
   </footer>
 </main>

@@ -8,21 +8,21 @@ import Form from "../components/Form.astro";
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="zh">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Sunrise Homeopathy - Offering professional homeopathic consultations for various health concerns. Based in the UK."
+      content="Sunrise 顺势疗法 - 为各种健康问题提供专业的顺势疗法咨询。总部位于英国。"
     />
     <meta
       name="keywords"
-      content="Homeopathy, Sunrise Homeopathy, Sue Lyn, Homeopathic consultations, Health, Wellness, Natural Remedies, Holistic, UK"
+      content="顺势疗法, Sunrise Homeopathy, Sue Lyn, 顺势疗法咨询, 健康, 养生, 自然疗法, 整体疗法, 英国"
     />
-    <title>Sunrise Homeopathy | S.L. Suresh</title>
-    <link rel="canonical" href="https://sunrisehomeopathy.co.uk/" />
-    <link rel="icon" href="./logo.svg" type="image/svg+xml" />
+    <title>Sunrise 顺势疗法 | S.L. Suresh</title>
+    <link rel="canonical" href="https://sunrisehomeopathy.co.uk/zh" />
+    <link rel="icon" href="/logo.svg" type="image/svg+xml" />
 
     <!-- Google Fonts Optimized -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -33,7 +33,7 @@ import Form from "../components/Form.astro";
     />
   </head>
   <body>
-    <Navbar />
+    <Navbar lang="zh" />
     <section class="main-page">
       <div class="main-left">
         <div class="intro flex flex-col">
@@ -45,16 +45,16 @@ import Form from "../components/Form.astro";
                 class="text-4xl lg:text-5xl font-light tracking-wide text-left"
                 style="font-family: var(--font-secondary);"
               >
-                Homeopathy consultations with <span
+                与 <span
                   class="italic"
                   style="color: var(--primary-color);">Sue (LCCH)</span
-                >
+                > 的顺势疗法咨询
               </h1>
             </div>
             <img
               class="order-2 xl:col-start-1 xl:row-span-2 w-full sm:w-64 object-cover rounded-l-full"
               src="/images/pfp.webp"
-              alt="Sue Lyn Suresh - Homeopath"
+              alt="Sue Lyn Suresh - 顺势疗法医师"
               width="256"
               height="256"
               fetchpriority="high"
@@ -65,8 +65,7 @@ import Form from "../components/Form.astro";
                 class="text-xl text-left"
                 style="font-family: var(--font-primary);"
               >
-                I am a homeopath, Graduated from the Contemporary College of
-                Homeopathy, Bristol, UK.
+                我是一名顺势疗法医师，毕业于英国布里斯托尔现代顺势疗法学院。
               </p>
             </div>
           </div>
@@ -74,7 +73,7 @@ import Form from "../components/Form.astro";
             <button
               class="dropdown-toggle justify-start! xl:justify-end! gap-2"
             >
-              <span>Certificates</span>
+              <span>证书</span>
               <span class="dropdown-arrow">▼</span>
             </button>
             <div class="dropdown-content">
@@ -84,7 +83,7 @@ import Form from "../components/Form.astro";
                 <img
                   class="w-full sm:w-1/2 max-h-100 object-contain rounded-md shadow-sm bg-gray-50/50"
                   src="/images/cert.webp"
-                  alt="Licentiate Certification"
+                  alt="执业证书"
                   width="400"
                   height="533"
                   loading="lazy"
@@ -93,7 +92,7 @@ import Form from "../components/Form.astro";
                 <img
                   class="w-full sm:w-1/2 max-h-100 object-contain rounded-md shadow-sm bg-gray-50/50"
                   src="/images/soh-cert.webp"
-                  alt="Society of Homeopaths Registration"
+                  alt="顺势疗法协会注册"
                   width="400"
                   height="573"
                   loading="lazy"
@@ -106,11 +105,10 @@ import Form from "../components/Form.astro";
 
         <div class="extra-text fade-in text-xl">
           <p>
-            I offer a <span
+            我提供一个<span
               class="font-semibold"
-              style="color: var(--primary-color);">safe and supportive</span
-            > space to explore your health concerns through homeopathy. If you'd like
-            to know more or book a consultation, please don't hesitate to get in touch.
+              style="color: var(--primary-color);">安全、支持性</span
+            >的空间，通过顺势疗法探索您的健康问题。如果您想了解更多或预约咨询，请随时与我联系。
           </p>
         </div>
       </div>
@@ -120,30 +118,30 @@ import Form from "../components/Form.astro";
           style="font-family: var(--font-secondary);font-weight: 100;"
           class="leading-tight"
         >
-          Request a private consultation <span class="font-medium">today.</span>
+          <span class="font-medium">立即</span>预约私人咨询。
         </h2>
         <a
           href="#contact-section"
-          class="btn-primary btn-right button-animation">Contact</a
+          class="btn-primary btn-right button-animation">联系</a
         >
         <a href="#faq-section" class="btn-glass btn-right button-animation"
-          >FAQ's</a
+          >常见问题</a
         >
         <a href="#pricing-section" class="btn-glass btn-right button-animation"
-          >Consultations</a
+          >咨询服务</a
         >
       </div>
     </section>
 
     <section class="slideshow-section my-24 px-4 sm:py-20">
-      <Slideshow />
+      <Slideshow lang="zh" />
       <div class="text-xl mt-4 text-gray-600 text-center">
         <p>
-          For more information on homeopathy, please visit the <a
+          欲了解更多有关顺势疗法的信息，请访问<a
             class="underline"
             href="https://www.homeopathy-soh.org/"
-            target="_blank">Society of Homeopaths</a
-          > website.
+            target="_blank">顺势疗法协会</a
+          >网站。
         </p>
       </div>
     </section>
@@ -151,45 +149,40 @@ import Form from "../components/Form.astro";
     <section id="faq-section" class="my-24 text-white">
       <div class="faq">
         <h2 class="text-left text-4xl my-6 w-full font-secondary">
-          Frequently Asked Questions
+          常见问题解答
         </h2>
         <div>
           <h3 class="text-3xl my-4 font-secondary tracking-wide">
-            How many sessions do I need?
+            我需要多少次疗程？
           </h3>
           <p>
-            That is hard to say. A simple acute case can usually be resolved
-            quickly (covid, food poisoning, minor injuries), whereas a complex
-            illness with many years of history needs plenty of time (months to
-            years) to work through it. Examples are eczema, depression,
-            autoimmune disorders, etc.
+            这很难说。简单的急性病症通常可以很快解决（如新冠、食物中毒、轻微受伤），而有着多年病史的复杂疾病则需要大量时间（数月甚至数年）来调理。例如湿疹、抑郁症、自身免疫性疾病等。
           </p>
         </div>
         <div>
           <h3 class="text-3xl my-4 font-secondary tracking-wide">
-            Do I need my own kit?
+            我需要自己的药箱吗？
           </h3>
           <p>
-            I would always recommend buying a kit if you plan to use homeopathy
-            long term as it can come in very handy for emergency situations.
+            如果您计划长期使用顺势疗法，我始终建议购买一个药箱，它在紧急情况下会非常有用。
             <a href="https://ainsworths.com/The-Essential-Kit/" target="_blank"
               >Ainsworths.com</a
             >
           </p>
         </div>
         <p class="font-secondary">
-          If you have any other questions, feel free to get in touch.
+          如果您有任何其他问题，欢迎随时联系。
         </p>
         <a
           href="#contact-section"
           class="w-40 rounded-lg my-5 text-[#51bc31]! text-center py-4 border bg-white border-gray-200 hover:border-white hover:text-white! transition-all hover:scale-102 hover:bg-transparent duration-300"
-          >Contact
+          >联系
         </a>
       </div>
     </section>
 
     <section id="pricing-section" class="pricing my-20">
-      <Consultations />
+      <Consultations lang="zh" />
     </section>
 
     <section
@@ -199,7 +192,7 @@ import Form from "../components/Form.astro";
       <h2
         class="text-4xl text-center mt-6 text-white font-secondary tracking-wide"
       >
-        Book an Appointment / Enquire
+        预约 / 咨询
       </h2>
       <div class="max-w-xl mx-auto py-12 px-4">
         <div
@@ -208,20 +201,20 @@ import Form from "../components/Form.astro";
           <a
             href="mailto:lavenderthyme@protonmail.com"
             class="text-white text-xl hover:text-gray-300"
-            >Email me: <span class="underline"
+            >电邮联系：<span class="underline"
               >lavenderthyme@protonmail.com</span
             ></a
           >
         </div>
 
-        <p class="text-2xl text-white font-secondary text-center my-6">Or</p>
+        <p class="text-2xl text-white font-secondary text-center my-6">或</p>
 
-        <Form />
+        <Form lang="zh" />
       </div>
     </section>
 
     <section class="footer">
-      <Footer />
+      <Footer lang="zh" />
     </section>
     <script type="module" src="/js/dropdown.js"></script>
     <script>
