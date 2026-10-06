@@ -24,6 +24,9 @@ import Form from "../components/Form.astro";
     <link rel="canonical" href="https://sunrisehomeopathy.co.uk/" />
     <link rel="icon" href="./logo.svg" type="image/svg+xml" />
 
+    <!-- Preload hero image for LCP -->
+    <link rel="preload" as="image" href="/images/pfp.webp" type="image/webp" />
+
     <!-- Google Fonts Optimized -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -38,7 +41,7 @@ import Form from "../components/Form.astro";
       <div class="main-left">
         <div class="intro flex flex-col">
           <div
-            class="xl:grid xl:grid-cols-[auto_1fr] xl:gap-x-8 xl:gap-y-4 flex flex-col gap-6 fade-in items-start"
+            class="xl:grid xl:grid-cols-[auto_1fr] xl:gap-x-8 xl:gap-y-4 flex flex-col gap-6 items-start"
           >
             <div class="order-1 xl:col-start-2 xl:row-start-1 text-left">
               <h1
@@ -115,7 +118,7 @@ import Form from "../components/Form.astro";
         </div>
       </div>
 
-      <div class="main-right fade-in-right gradient-background py-12 mt-10">
+      <div class="main-right gradient-background py-12 mt-10">
         <h2
           style="font-family: var(--font-secondary);font-weight: 100;"
           class="leading-tight"
